@@ -8,10 +8,10 @@ function App() {
     const [valorFuturo, setValorFuturo] = useState("")
     const [resultado, setResultado] = useState("")
 
-    // Juros Simples
+    
     const calcularJurosSimples = () => {
         const C = parseFloat(capital)
-        const i = parseFloat(taxa) / 100 // taxa em %
+        const i = parseFloat(taxa) / 100
         const t = parseFloat(tempo)
 
         const J = C * i * t
@@ -20,7 +20,7 @@ function App() {
         setResultado(`J = ${J.toFixed(2)}, M = ${M.toFixed(2)}`);
     };
 
-    // Juros Compostos
+    
     const calcularJurosCompostos = () => {
         const C = parseFloat(capital)
         const i = parseFloat(taxa) / 100
@@ -32,7 +32,7 @@ function App() {
         setResultado(`J = ${J.toFixed(2)}, M = ${M.toFixed(2)}`)
     };
 
-    // Valor Presente
+    
     const calcularValorPresente = () => {
         const VF = parseFloat(valorFuturo)
         const i = parseFloat(taxa) / 100
